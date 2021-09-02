@@ -10,6 +10,7 @@ const cors = require("cors");
 const header = require("./middleware/header");
 const AllCertificateData = require("./models/expence");
 require("./database/databaseConnection");
+const client = require('twilio')(accountSid, authToken);
 const PORT = process.env.PORT || 8000;
 
 require("dotenv").config();

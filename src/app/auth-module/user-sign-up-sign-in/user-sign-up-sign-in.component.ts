@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-user-sign-up-sign-in',
@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./user-sign-up-sign-in.component.css']
 })
 export class UserSignUpSignInComponent implements OnInit {
+
+  @ViewChild('container', { read: ElementRef, static: false }) container!: ElementRef;
+
 
   constructor() { }
 
